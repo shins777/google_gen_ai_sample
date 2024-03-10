@@ -1,36 +1,26 @@
-# Vertex AI Search
+# Google Grounding Services
+## 1. Vertex AI Search
 Vertex AI Search 는 Google의 Managed Out of box Vector search tool 입니다. 
 사용자는 정형, 비정형, Web site 데이터를 특별한 전처리 없이 그대로 시멘틱서치를 위해서 Vectorization을 자동화된 방법으로 처리해주는 구글의 서비스입니다.  
+* https://cloud.google.com/generative-ai-app-builder/docs/enterprise-search-introduction
 
+### References  
+
+#### Vertex AI Search 메뉴얼
+* https://cloud.google.com/generative-ai-app-builder/docs/try-enterprise-search
+* https://cloud.google.com/generative-ai-app-builder/docs/create-datastore-ingest
+
+#### 기타 참고 사항
+* quotas : https://cloud.google.com/generative-ai-app-builder/quotas#allocation-quotas
 
 ---
 
-# References  
+## 2. BigQuery as a Vector store.
+BigQuery의 새로운 기능으로 Vector 데이터를 저장하고 검색할 수 있는 기능을 제공합니다.
+* https://cloud.google.com/bigquery/docs/vector-search-intro?hl=ko
 
-## API 참고
-상세한 Python API 정보는 아래 URL 참고하세요.
-* Langchain library : https://github.com/langchain-ai/langchain
-* Langchain Vertex AI API : https://api.python.langchain.com/en/stable/google_vertexai_api_reference.html
+### References  
 
-만일 Gemini Native code를 사용하시려면 아래 URL 참고하세요.  
-Gemini Native code를 사용하면 상대적으로 약간의 Latency 이점을 얻을 수 있습니다.
-* Getting start : https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-multimodal?hl=ko
-* API 참고(Python SDK) : https://cloud.google.com/vertex-ai/generative-ai/docs/sdk-for-llm/llm-sdk-overview
-* API 참고(REST API) : https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/overview?hl=ko
-* 기타 유용한 정보들 : https://cloud.google.com/vertex-ai/generative-ai/docs/release-notes?hl=ko
-
-## 인증방법
-코드를 Colab 환경에서 실행하기 위해서는 아래와 같은 인증이 필요합니다.  
-만일 다른 환경에서 실행한다면, 아래와 URL 정보를 참고하여 GCP에 접근 하는 환경을 구성해야 합니다. 
-* https://cloud.google.com/docs/authentication?hl=ko
-
-만일 어플리케이션이 로컬환경에서 처리되어서 Service account file 이 있다면, 아래 가이드가 하나의 인증 방법이 될수 있습니다.
-* https://cloud.google.com/docs/authentication/provide-credentials-adc?hl=ko
-
-## 기타 참고 사항
-* Latest Update : Feb 2024: 
-    - Gemini 1.5 Pro :   
-        - 최근에는 Gemini 1.5 Pro가 출시되어 Private Preview 단계에서 좀더 진화된 모델을 제공하고 있습니다.  
-        - https://blog.google/technology/ai/google-gemini-next-generation-model-february-2024/#performance. 
-
-
+#### BigQuery Vector Search Langchain 메뉴얼
+*   https://python.langchain.com/docs/integrations/vectorstores/bigquery_vector_search
+*   https://api.python.langchain.com/en/stable/vectorstores/langchain_community.vectorstores.bigquery_vector_search.BigQueryVectorSearch.html#langchain_community.vectorstores.bigquery_vector_search.BigQueryVectorSearch

@@ -1,8 +1,8 @@
-# Gemini Pro  
-Gemini 는 Multi Modality 기반에서 학습된 모델입니다. 
-Gemini Pro 내에는 아래와 같이 두가지 모델이 있으며, 각각 Text, Image, Video를 처리하는 목적으로 사용됩니다.    
-* Gemini Pro Text : 주로 Text 기반의 처리를 하는 Model.  
-* Gemini Pro Vision : Image, Video 를 분석하는데 사용되는 모델.  
+# Imagen
+
+Imagen은 아래와같은 기능을 처리할 수 있는 GCP 서비스입니다. 
+
+
 
 ---
 
