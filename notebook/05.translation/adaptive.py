@@ -88,49 +88,50 @@ class AdaptiveTest():
         
         return response
 
-    def list_adaptive_mt_datasets():
+    def list_adaptive_mt_datasets(self,
+            project_id:str,
+            location:str):
 
-        # Initialize the request
         request = translate.ListAdaptiveMtDatasetsRequest(
-            parent="projects/PROJECT_ID/locations/LOCATION",
+            parent=f"projects/{project_id}/locations/{location}",
         )
-        # Make the request
         response = self.client.list_adaptive_mt_datasets(request)
-        # Handle the response
         print(response)
 
-    def delete_adaptive_mt_dataset():
+    def delete_adaptive_mt_dataset(self,
+            project_id:str,
+            location:str,
+            dataset_id:str):
 
-        # Initialize the request
         request = translate.DeleteAdaptiveMtDatasetRequest(
-            name="projects/PROJECT_ID/locations/LOCATION/adaptiveMtDatasets/DATASET_ID"
+            name=f"projects/{project_id}/locations/{location}/adaptiveMtDatasets/{dataset_id}"
         )
-        # Make the request
-        response = client.delete_adaptive_mt_dataset(request)
-        # Handle the response
+        response = self.client.delete_adaptive_mt_dataset(request)
         print(response)
 
-    def list_adaptive_mt_files():
+    def list_adaptive_mt_files(self,
+            project_id:str,
+            location:str,
+            dataset_id:str):
 
-        # Initialize the request
         request = translate.ListAdaptiveMtFilesRequest(
-            parent="projects/PROJECT_ID/locations/LOCATION/adaptiveMtDatasets/DATASET_ID"
+            parent=f"projects/{project_id}/locations/{location}/adaptiveMtDatasets/{dataset_id}"
         )
-        # Make the request
-        response = client.list_adaptive_mt_files(request)
-        # Handle the response
+        response = self.client.list_adaptive_mt_files(request)
         print(response)
 
-    def delete_adaptive_mt_file():
+    def delete_adaptive_mt_file(self,
+            project_id:str,
+            location:str,
+            dataset_id:str,
+            file_id:str):
 
-        # Initialize the request
         request = translate.DeleteAdaptiveMtFileRequest(
-            name="projects/PROJECT_ID/locations/LOCATION/adaptiveMtDatasets/DATASET_ID/adaptiveMtFiles/FILE_ID"
+            name=f"projects/{project_id}/locations/{location}/adaptiveMtDatasets/{dataset_id}/adaptiveMtFiles/{file_id}"
         )
-        # Make the request
-        response = client.delete_adaptive_mt_file(request)
-        # Handle the response
+        response = self.client.delete_adaptive_mt_file(request)
         print(response)
+        
 
 
 
